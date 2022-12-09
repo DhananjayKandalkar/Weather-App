@@ -1,0 +1,27 @@
+
+.country__container>div>h1{
+    text-align: center;
+}
+.weather__info_box{
+    gap: 2rem;
+}
+.weather__info_button{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.weather__info_button>button{
+    padding: 1rem;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.weather__info_container{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+}

@@ -1,0 +1,11 @@
+.weather__card{
+    padding: 1rem;
+}
+.weather__card>h2{
+    text-align: center;
+    padding: 1rem;
+}
+.content__spaces{
+    display: flex;
+    gap: 2.5rem;
+}

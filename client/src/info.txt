@@ -1,0 +1,5 @@
+weather stack
+http://api.weatherstack.com/current?access_key=09556ec653420da914f68ff36992db05&query=peru
+
+open weather api
+https://api.openweathermap.org/data/2.5/weather?q=pune&appid=27ffc44c2332074dfe6f53f108ffe342
