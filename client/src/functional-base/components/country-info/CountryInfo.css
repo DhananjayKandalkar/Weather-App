@@ -5,12 +5,12 @@
 .weather__info_box{
     gap: 2rem;
 }
-.weather__info_button{
+.weather__info_button, .go__back_button{
     display: flex;
     justify-content: center;
     margin: 2rem 0;
 }
-.weather__info_button>button{
+.weather__info_button>button, .go__back_button>button{
     padding: 1rem;
     background-color: green;
     color: white;
@@ -18,7 +18,9 @@
     border-radius: 20px;
     cursor: pointer;
 }
-
+.go__back_button>button{
+    background-color: red;
+}
 .weather__info_container{
     padding: 2rem;
     display: grid;

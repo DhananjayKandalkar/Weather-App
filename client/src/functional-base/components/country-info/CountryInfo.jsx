@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import WeatherInfo from "../weather-info/WeatherInfo";
 import "./CountryInfo.css";
@@ -11,6 +11,8 @@ const CountryInfo = () => {
   const { country } = useParams();
   const [singleCountry, setSingleCountry] = useState([]);
   const [toggle, setToggle] = useState(false);
+
+  const navigate = useNavigate();
 
   const getCountryInfo = () => {
     axios
@@ -26,6 +28,10 @@ const CountryInfo = () => {
   const handleWeather = () => {
     setToggle(() => !toggle);
   };
+
+  const handleBack = () => {
+    navigate(-1)
+  }
 
   return (
     <div className="country__container">
@@ -56,6 +62,9 @@ const CountryInfo = () => {
               }
             })
           : ""}
+      </div>
+      <div className="go__back_button">
+        <button onClick={handleBack}>Go Back</button>
       </div>
     </div>
   );
