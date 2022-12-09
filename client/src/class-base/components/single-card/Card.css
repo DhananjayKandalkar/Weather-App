@@ -1,0 +1,23 @@
+.country__card{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    margin: auto;
+    padding: 2rem 1.5rem;
+}
+.img__box{
+    flex: 50%;
+}
+.img__box>img{
+    width: 50%;
+    margin: auto;
+    object-fit: cover;
+}
+.info__box{
+    width: 50%;
+}
+.latlong__box{
+    display: flex;
+    justify-content: space-between;
+}

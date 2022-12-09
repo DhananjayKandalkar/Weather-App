@@ -1,0 +1,26 @@
+.form__container{
+    width: 40%;
+    margin: 2rem auto;
+    border: 1px solid grey;
+    padding: 2rem 0;
+}
+.form__container>div>h1{
+    text-align: center;
+}
+.form>div{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+}
+.form>div>input:nth-child(1){
+    padding: 0.5rem;
+}
+.form>div>input:nth-child(2){
+    padding: 0.5rem;
+    background-color: teal;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
