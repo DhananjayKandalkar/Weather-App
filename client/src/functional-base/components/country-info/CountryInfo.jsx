@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
-import WeatherInfo from "../weather-info/WeatherInfo";
 import "./CountryInfo.css";
+import WeatherInfo from "../weather-info/WeatherInfo";
 import Card from "../single-card/Card";
-
-
 
 const CountryInfo = () => {
   const { country } = useParams();
@@ -15,9 +12,9 @@ const CountryInfo = () => {
   const navigate = useNavigate();
 
   const getCountryInfo = () => {
-    axios
-      .get(`https://restcountries.com/v2/name/${country}`)
-      .then((response) => setSingleCountry(response.data))
+    fetch(`https://restcountries.com/v2/name/${country}`)
+      .then((response) => response.json())
+      .then((json) => setSingleCountry(json))
       .catch((error) => console.log(error.message));
   };
 
@@ -30,8 +27,8 @@ const CountryInfo = () => {
   };
 
   const handleBack = () => {
-    navigate(-1)
-  }
+    navigate(-1);
+  };
 
   return (
     <div className="country__container">

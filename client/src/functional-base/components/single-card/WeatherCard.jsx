@@ -19,54 +19,30 @@ const WeatherCard = ({
         City: {name}, {country_name}
       </h2>
       <div className="content__spaces">
-        <span>
-          <b>Humidity : </b> {humidity}
-        </span>
-        <span>
-          <b>Pressure : </b> {pressure}
-        </span>
+        <span>Humidity : {humidity}</span>
+        <span>Pressure : {pressure}</span>
       </div>
       <div>
         {weather.map((el) => (
           <div key={el.id} className="content__spaces">
-            <p>
-              <b>Weather Status : </b> {el.main}
-            </p>
-            <p>
-              <b>Weather Info: </b> {el.description}
-            </p>
+            <p>Weather Status : {el.main}</p>
+            <p>Weather Info: {el.description}</p>
           </div>
         ))}
       </div>
       <div className="content__spaces">
-        <span>
-          <b>Max Temperature : </b> {temp_max}
-        </span>
-        <span>
-          <b>Min Temperature : </b> {temp_min}
-        </span>
+        <span>Max Temperature : {temp_max}</span>
+        <span>Min Temperature : {temp_min}</span>
       </div>
-      <p>
-        <b>From Sea Level : </b> {sea_level}
-      </p>
-      <div className="content__spaces"> 
-        <span>
-          <b>Sunrise : </b> {sunrise}
-        </span>
-        <span>
-          <b>Sunset : </b> {sunset}
-        </span>
+      <p>From Sea Level : {sea_level}</p>
+      <div className="content__spaces">
+        <span>Sunrise : {sunrise}</span>
+        <span>Sunset : {sunset}</span>
       </div>
       <div className="content__spaces">
-        <span>
-          <b> Wind :: </b>
-        </span>
-        <span>
-          <b>deg : </b> {deg}
-        </span>
-        <span>
-          <b>Speed : </b> {speed}
-        </span>
+        <span>Wind ::</span>
+        <span>deg : {deg}</span>
+        <span>Speed : {speed}</span>
       </div>
     </div>
   );
