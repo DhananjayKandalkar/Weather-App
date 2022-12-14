@@ -37,7 +37,11 @@ const CountryInfo = () => {
       </div>
       <div className="country__card_box">
         {singleCountry?.map((elem, index) => {
-          return <Card key={index + 1} {...elem} country_name={country} />;
+          return (
+            <div key={index + 1} data-testid="card-display-check">
+              <Card {...elem} country_name={country} />
+            </div>
+          );
         })}
       </div>
       <div className="weather__info_button">
@@ -50,11 +54,12 @@ const CountryInfo = () => {
           ? singleCountry?.map((elem, index) => {
               if (elem.capital) {
                 return (
-                  <WeatherInfo
-                    key={index + 1}
-                    capital_name={elem.capital}
-                    country_name={country}
-                  />
+                  <div key={index + 1} data-testid="weatherinfo-display-check">
+                    <WeatherInfo
+                      capital_name={elem.capital}
+                      country_name={country}
+                    />
+                  </div>
                 );
               }
             })
